@@ -26,11 +26,16 @@ body {
     padding-top: 4px;
     text-align: right;
 }
+h3{
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
 
 .chunk{
-  border-bottom: 1px solid #CCCCCC;
   overflow: hidden;
+  padding: 20px;
 }
 
 .chunk a{
@@ -40,8 +45,8 @@ body {
     text-decoration: none;
 }
 .chunk img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     margin: 20px;
 }
 .chunk span{
