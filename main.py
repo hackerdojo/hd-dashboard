@@ -1,19 +1,16 @@
 #!/usr/bin/env python
 
-import wsgiref.handlers
-
+import webapp2
 from google.appengine.ext.webapp import template
 from google.appengine.ext import webapp
 
-class MainHandler(webapp.RequestHandler):
+
+class MainHandler(webapp2.RequestHandler):
 
   def get(self):
     self.response.out.write(template.render('main.html', locals()))
 
-def main():
-  application = webapp.WSGIApplication([('/', MainHandler)], debug=True)
-  wsgiref.handlers.CGIHandler().run(application)
 
-if __name__ == '__main__':
-  main()
-  
+application = webapp2.WSGIApplication([
+    ('/', MainHandler),
+], debug=True)  
