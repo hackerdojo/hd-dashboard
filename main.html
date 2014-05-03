@@ -9,17 +9,17 @@
 </head> 
 <body id="body">
   
-<!--  <div id="top">
+<div id="top">
     <div>
-      <a href="https://www.google.com/a/hackerdojo.com/ServiceLogin?service=ah&passive=true&continue=https://appengine.google.com/_ah/conflogin%3Fcontinue%3Dhttp://dashboard.hackerdojo.com/&ltmpl=ga&shdf=Ch4LEgZhaG5hbWUaEkhhY2tlciBEb2pvIEV2ZW50cwwSAmFoIhQJ5PFByChIovRb3rWKYJDo56ZxVCgBMhRzkwF9iPJ2xRvr7lyRUWfnfqHkqw" style="font-weight: bold;">Login</a>
+      <a href="login" style="font-weight: bold;">{{ login_text }}</a>
       |
       <a href="http://signup.hackerdojo.com/upgrade/needaccount">Need an account?</a>
     </div>
   </div>
--->
+
   <div id="content">
     <h1>Dojo Dashboard</h1>
-    
+    <h4>{{ greeting }}</h4>
     <div class="chunk">
       <h3></h3>
       <a id="mail" title="mail" href="https://mail.google.com/a/hackerdojo.com/">
@@ -30,18 +30,18 @@
         <img src="/static/img/events.png" />
         <span>Events</span>
       </a>
-      <a id="kudos" title="kudos" href="http://kudos.hackerdojo.com/">
-        <img src="/static/img/kudos.png" />
-        <span>Kudos</span>
-      </a>
-      <a id="voice" title="voice" href="http://voice.hackerdojo.com/forums/85749-issues-for-discussion">
-        <img src="/static/img/voice.png" />
-        <span>Voice</span>
-      </a>
-      <a id="vote" title="vote" href="http://vote.hackerdojo.com">
+      <a id="vote" title="vote" href="http://vote.hackerdojo.com/">
         <img src="/static/img/vote.jpg" />
         <span>Vote</span>
+      </a>      
+      <a id="vote" title="vote" href="https://hackerdojo-vote.appspot.com/">
+        <img src="/static/img/vote.jpg" />
+        <span>Create a Poll</span>
       </a>
+      <a id="swag" title="swag" href="https://squareup.com/market/hacker-dojo">
+        <img src="/static/img/coffee.jpg" />
+        <span>Swag Store</span>
+      </a>      
     </div>
  
     <br />
@@ -64,24 +64,18 @@
         <img src="/static/img/github.gif" />
         <span>Github</span>
       </a>
-      <a id="bugs" title="bug tracking" href="http://track.hackerdojo.com/">
-        <img src="/static/img/Bug.png" />
-        <span>Facilities<br />Issues</span>
-      </a>
+
       <a id="signs" title="signs" href="http://signs.hackerdojo.com/">
         <img src="/static/img/signs.jpg" />
         <span>Signs</span>
       </a>
+
     </div>    
     
     <br />
  
     <div class="chunk">
       <h3>Misc</h3>
-      <a id="transactions" title="transactions" href="http://finances.hackerdojo.com/">
-        <img src="/static/img/transactions.png" />
-        <span>Transactions</span>
-      </a>
       <a id="log" title="log" href="http://log.hackerdojo.com/">
         <img src="/static/img/log.jpg" />
         <span>Log</span>
@@ -96,9 +90,9 @@
         <span>Sign-in Stats</span>
       </a>
  -->
-      <a id="kiosk" title="kiosk" href="http://hackerdojo-kiosk.appspot.com/">
+      <a id="Map" title="Map" href="http://kiosk.hackerdojo.com/map">
         <img src="/static/img/kiosk.png" />
-        <span>Kiosk</span>
+        <span>Map</span>
       </a>
       <a id="signin" title="signin" href="http://hackerdojo-signin.appspot.com/">
         <img src="/static/img/signin.png" />

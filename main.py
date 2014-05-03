@@ -1,19 +1,22 @@
 #!/usr/bin/env python
 
-import wsgiref.handlers
-
+import webapp2
+from google.appengine.api import users
 from google.appengine.ext.webapp import template
-from google.appengine.ext import webapp
 
-class MainHandler(webapp.RequestHandler):
-
+class MainHandler(webapp2.RequestHandler):
   def get(self):
-    self.response.out.write(template.render('main.html', locals()))
+    user = users.get_current_user()
+    values = {}
+    if not user:
+      values["login_text"] = "Login"
+      values["greeting"] = ""
+    else:
+      values["login_text"] = "Logout"
+      values["greeting"] = "Hello, %s!" % (user.nickname())
 
-def main():
-  application = webapp.WSGIApplication([('/', MainHandler)], debug=True)
-  wsgiref.handlers.CGIHandler().run(application)
+    self.response.out.write(template.render("main.html", values))
 
-if __name__ == '__main__':
-  main()
-  
+application = webapp2.WSGIApplication([
+    ("/", MainHandler),
+], debug=True)  
