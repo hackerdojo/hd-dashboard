@@ -8,7 +8,13 @@ handlers:
 - url: /static
   static_dir: static
 - url: /login
-  script: login.application 
+  script: login.application
+- url: /billing
+  script: billing.application
+  login: required
+- url: /_km/.*
+  script: keymaster.app
+  login: admin
 - url: .*
   script: main.application
 
