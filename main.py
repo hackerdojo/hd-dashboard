@@ -23,6 +23,7 @@ class MainHandler(webapp2.RequestHandler):
     # If we're in the dev version, it should send people to the dev version of
     # other apps.
     if dev:
+      values["dev_message"] = "You are using the dev version of Dashboard."
       values["signup_url"] = "http://signup-dev.hackerdojo.com/key"
     else:
       values["signup_url"] = "http://signup.hackerdojo.com/key"
