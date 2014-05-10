@@ -9,9 +9,6 @@ handlers:
   static_dir: static
 - url: /login
   script: login.application
-- url: /billing
-  script: billing.application
-  login: required
 - url: /_km/.*
   script: keymaster.app
   login: admin
