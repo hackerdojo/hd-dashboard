@@ -18,8 +18,7 @@ class MainHandler(webapp2.RequestHandler):
       values["login_text"] = "Login"
       values["greeting"] = ""
     else:
-      values["login_text"] = "Logout"
-      values["greeting"] = "Hello, %s!" % (user.nickname())
+      values["login_text"] = "Logout %s" % (user.nickname())
     # If we're in the dev version, it should send people to the dev version of
     # other apps.
     if dev:
