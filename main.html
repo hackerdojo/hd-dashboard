@@ -13,7 +13,7 @@
     <div>
       <a href="login" style="font-weight: bold;">{{ login_text }}</a>
       |
-      <a href="http://signup.hackerdojo.com/upgrade/needaccount">Need an account?</a>
+      <a href="{{ signup_url }}/upgrade/needaccount">Need an account?</a>
       <a>{{ dev_message }}</a>
     </div>
   </div>
@@ -28,7 +28,7 @@
         <span>Dojo Mail</span>
       </a>
       
-      <a id="keys" title="keys" href="{{ signup_url }}">
+      <a id="keys" title="keys" href="{{ signup_url }}/key">
         <img src="static/img/key.png" />
         <span>Register A Key</span>
       </a>
@@ -38,7 +38,7 @@
         <span>Sign In</span>
       </a>
 
-      <a id="mybilling" title="mybilling" href="http://signup.hackerdojo.com/my_billing">
+      <a id="mybilling" title="mybilling" href="{{ signup_url }}/my_billing">
         <img src="static/img/bill.png" />
         <span>My Billing</span>
       </a>
