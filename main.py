@@ -18,15 +18,14 @@ class MainHandler(webapp2.RequestHandler):
       values["login_text"] = "Login"
       values["greeting"] = ""
     else:
-      values["login_text"] = "Logout"
-      values["greeting"] = "Hello, %s!" % (user.nickname())
+      values["login_text"] = "Logout %s" % (user.nickname())
     # If we're in the dev version, it should send people to the dev version of
     # other apps.
     if dev:
       values["dev_message"] = "You are using the dev version of Dashboard."
-      values["signup_url"] = "http://signup-dev.hackerdojo.com/key"
+      values["signup_url"] = "http://signup-dev.appspot.com"
     else:
-      values["signup_url"] = "http://signup.hackerdojo.com/key"
+      values["signup_url"] = "http://signup.hackerdojo.com"
 
     self.response.out.write(template.render("main.html", values))
 
