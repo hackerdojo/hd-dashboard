@@ -2,7 +2,7 @@
 application: hd-dashboard
 # Use this if deploying to dev app:
 #application: hd-dashboard-dev
-version: 1
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: true
