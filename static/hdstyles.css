@@ -1,0 +1,49 @@
+.hdfootnote{
+  color:grey;
+  font-size: 70%;
+}
+
+/* centered columns styles */
+.hd-row-centered {
+  text-align:center;
+}
+
+.hd-col-centered {
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
+}
+
+.hd-dashboard-img {
+  display: inline-block;
+  height: 50px;
+}
+
+.hd-navbar-img {
+  display: inline-block; 
+  height: 18px;
+  vertical-align: middle;
+}
+
+.hd-dashboard-row-margin {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.hd-spacer50 { 
+  height: 50px; 
+  width: 100%; 
+  font-size: 0; 
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  display: block;
+  border-bottom: 10px solid #990033;
+}
+
+.hd-navbar-background {
+  background-color: #990033;
+}
