@@ -1,125 +1,166 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link type="text/css" rel="stylesheet" href="/static/style.css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" src="/static/main.js"></script>
-  <title>Dojo Dashboard</title>
-</head> 
-<body id="body">
-  
-<div id="top">
-    <div>
-      <a href="login" style="font-weight: bold;">{{ login_text }}</a>
-      |
-      <a href="{{ signup_url }}/upgrade/needaccount">Need an account?</a>
-      <a>{{ dev_message }}</a>
-    </div>
-  </div>
+<html  lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hacker Dojo Dashboard</title>
 
-  <div id="content">
-    <h1>Dojo Dashboard</h1>
-    <div class="chunk">
-      <h3>Your Account</h3>
-      <a id="mail" title="Dojo Mail" href="https://mail.google.com/a/hackerdojo.com/">
-        <img src="static/img/mail.png" />
-        <span>Dojo Mail</span>
-      </a>
+    <link rel="icon" type="image/ico" href="http://cdn.hackerdojo.com/favicon.ico" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/hdstyles.css">
+  </head> 
+
+  <body>
+    <header id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="banner">
+      <div class="container">
+
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".hd-navbar-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+               <span>Dojo Dashboard</span>
+            </a>
+         </div>
+
+         <nav class="collapse navbar-collapse hd-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+
+               <li><a href="login" style="font-weight: bold;">{{ login_text }}</a></li>
+               <li><a href="{{ signup_url }}/upgrade/needaccount">Need an account?</a> 
+                   <a>{{ dev_message }}</a></li>
+            </ul>
+         </nav>
+      </div> <!-- End container -->
+    </header>
+
+
+    <!-- separate the menu/navigation bar from the rest of the GUI -->
+    <hr class="hd-spacer50">
+
+    <!-- show the different sections of the dashboard here -->
+    <div id="dashboard-details" class="container">
+
+      <!-- "Your Account" dashboard icons go here -->
+      <h4 class="hd-dashboard-row-margin"><span class="glyphicon glyphicon-user"></span> Your Account</h4>
+      <div class="row hd-row-centered"> 
+        <div class="col-xs-3">
+           <a id="hd-mail" title="Hacker Dojo Mail" href="https://mail.google.com/a/hackerdojo.com/">
+            <img src="http://dashboard.hackerdojo.com/static/img/mail.png" alt="Dojo Mail" class="img-responsive hd-dashboard-img">
+              <h5>Dojo Mail</h5>
+          </a>
+        </div>
+
+        <div class="col-xs-3">
+          <a id="hd-keys" title="Register A Key" href="{{ signup_url }}/key">
+            <img src="http://dashboard.hackerdojo.com/static/img/key.png" alt="Register A Key" class="img-responsive hd-dashboard-img">
+            <h5>Register A Key</h5>
+          </a>
+        </div>
+
+        <div class="col-xs-3">
+          <a id="hd-checkin" title="Check In" href="http://hackerdojo-signin.appspot.com/">
+            <img src="http://dashboard.hackerdojo.com/static/img/signin.png" alt="Check In" class="img-responsive hd-dashboard-img">
+            <h5>Check In</h5>
+          </a>
+        </div>
+
+        <div class="col-xs-3">
+          <a id="hd-mybilling" title="My Billing" href="{{ signup_url }}/my_billing">
+            <img src="http://dashboard.hackerdojo.com/static/img/bill.png" alt="My Billing" class="img-responsive hd-dashboard-img">
+            <h5>My Billing</h5>
+          </a>
+        </div>
+      </div> <!-- End Your Account close div -->
+
+      <!-- What's Going On? -->
+      <hr class="half-rule hd-dashboard-row-margin">
+      <h4 class="hd-dashboard-row-margin"><span class="glyphicon glyphicon-info-sign"></span> What's Going On?</h4>
+      <div class="row hd-row-centered">
+
+        <div class="col-xs-3">
+           <a id="hd-log" title="Log" href="http://log.hackerdojo.com/">
+            <img src="http://dashboard.hackerdojo.com/static/img/log.jpg" alt="Log" class="img-responsive hd-dashboard-img" />
+            <h5>Log</h5>
+           </a>
+        </div>
       
-      <a id="keys" title="keys" href="{{ signup_url }}/key">
-        <img src="static/img/key.png" />
-        <span>Register A Key</span>
-      </a>
+        <div class="col-xs-3">
+           <a id="hd-events" title="Events" href="http://events.hackerdojo.com/">
+              <img src="http://dashboard.hackerdojo.com/static/img/events.png" alt="Events" class="img-responsive hd-dashboard-img"/>
+              <h5>Events</h5>
+           </a>
+        </div>
 
-      <a id="signin" title="signin" href="http://hackerdojo-signin.appspot.com/">
-        <img src="static/img/signin.png" />
-        <span>Sign In</span>
-      </a>
+        <div class="col-xs-3">
+           <a id="hd-groups" title="Groups" href="http://groups.google.com/a/hackerdojo.com/?hl=en&pli=1">
+              <img src="http://dashboard.hackerdojo.com/static/img/groups.png" alt="Groups" class="img-responsive hd-dashboard-img"/>
+              <h5>Groups</h5>
+           </a>
+        </div>
 
-      <a id="mybilling" title="mybilling" href="{{ signup_url }}/my_billing">
-        <img src="static/img/bill.png" />
-        <span>My Billing</span>
-      </a>
+        <div class="col-xs-3">
+           <a id="hd-map" title="Map" href="http://kiosk.hackerdojo.com/map">
+              <img src="http://dashboard.hackerdojo.com/static/img/map.png" alt="Map" class="img-responsive hd-dashboard-img"/>
+              <h5>Map</h5>
+           </a>
+        </div>
+      </div> <!-- End What's Going On? -->
 
-    </div>
- 
-    <br />
-  
-    <div class="chunk">
-      <h3>What's Going On</h3>
-
-      <a id="log" title="log" href="http://log.hackerdojo.com/">
-        <img src="static/img/log.jpg" />
-        <span>Log</span>
-      </a>
-
-      <a id="events" title="events" href="http://events.hackerdojo.com/">
-        <img src="static/img/events.png" />
-        <span>Events</span>
-      </a>
-
-      <a id="groups" title="groups" href="http://groups.google.com/a/hackerdojo.com/?hl=en&pli=1">
-        <img src="static/img/groups.png" />
-        <span>Groups</span>
-      </a>
+      <!-- Shape Dojo -->
+      <hr class="half-rule hd-dashboard-row-margin">
+      <h4 class="hd-dashboard-row-margin"><span class="glyphicon glyphicon-wrench"></span> Shape Dojo</h4>
+      <div class="row hd-row-centered">
+        <div class="col-xs-3">
+           <a id="hd-vote" title="Create A Poll" href="http://hackerdojo-vote.appspot.com/">
+              <img src="http://dashboard.hackerdojo.com/static/img/vote.jpg" alt="Create A Poll" class="img-responsive hd-dashboard-img"/>
+              <h5>Create A Poll</h5>
+           </a>
+        </div>
       
-      <a id="map" title="map" href="http://kiosk.hackerdojo.com/map">
-        <img src="static/img/map.png" />
-        <span>Map</span>
-      </a>
+        <div class="col-xs-3">
+           <a id="hd-transactions" title="Propose A Purchase" href="http://vote.hackerdojo.com/">
+              <img src="http://dashboard.hackerdojo.com/static/img/transactions.png" alt="Propose A Purchase" class="img-responsive hd-dashboard-img"/>
+              <h5>Propose A Purchase</h5>
+           </a>
+        </div>
 
-    </div>    
-    
-    <br />
- 
-    <div class="chunk">
-      <h3>Shape Dojo</h3>
+        <div class="col-xs-3">
+           <a id="hd-github" title="Github" href="https://github.com/hackerdojo">
+              <img src="http://dashboard.hackerdojo.com/static/img/github.gif" alt="Github" class="img-responsive hd-dashboard-img"/>
+              <h5>Github</h5>
+           </a>
+        </div>
+      </div> <!-- End Shape Dojo -->
 
-      <a id="vote" title="vote" href="http://hackerdojo-vote.appspot.com/">
-        <img src="static/img/vote.jpg" />
-        <span>Create a Poll</span>
-      </a>
+      <!-- Learn -->
+      <hr class="half-rule hd-dashboard-row-margin">
+      <h4 class="hd-dashboard-row-margin"><span class="glyphicon glyphicon-book"></span> Learn</h4>
+      <div class="row hd-row-centered">
+        <div class="col-xs-3">
+           <a id="hd-howto" title="How To Dojo?" href="http://www.hackerdojo.com/HowToDojo">
+              <img src="http://dashboard.hackerdojo.com/static/img/howto.png" alt="How To Dojo?" class="img-responsive hd-dashboard-img"/>
+              <h5>How To Dojo?</h5>
+           </a>
+        </div>
+      
+        <div class="col-xs-3">
+           <a id="hd-wiki" title="Dojo Wiki" href="http://wiki.hackerdojo.com">
+              <img src="http://dashboard.hackerdojo.com/static/img/help.jpg" alt="Dojo Wiki" class="img-responsive hd-dashboard-img"/>
+              <h5>Dojo Wiki</h5>
+           </a>
+        </div>
+      </div> <!-- End Learn -->
+    </div>  <!-- End main container -->
 
-      <a id="transactions" title="transactions" href="http://vote.hackerdojo.com/">
-        <img src="static/img/transactions.png" />
-        <span>Propose a Purchase</span>
-      </a>
+    <hr class="half-rule hd-dashboard-row-margin">
 
-      <a id="github" title="github" href="https://github.com/hackerdojo">
-        <img src="static/img/github.gif" />
-        <span>Github</span>
-      </a>
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-<!--      
-      <a id="signinStats" title="signin stats" href="http://hackerdojo-signin.appspot.com/stats">
-        <img src="static/img/FILLER.png" />
-        <span>Sign-in Stats</span>
-      </a>
+  </body>
 
-      <a id="members" title="members" href="http://signup.hackerdojo.com/memberlist">
-        <img src="static/img/members.jpg" />
-        <span>Members<br />List</span>
-      </a>
-
- -->
-    </div>
-
-    <div class="chunk">
-      <h3>Learn</h3>
-
-      <a id="HowTo" title="HowTo" href="http://www.hackerdojo.com/HowToDojo">
-        <img src="static/img/howto.png" />
-        <span>How To Dojo</span>
-      </a>
-
-      <a id="wiki" title="wiki" href="http://wiki.hackerdojo.com">
-        <img src="static/img/help.jpg" />
-        <span>Wiki</span>
-      </a>
-
-    </div>
-
-  </div>
-</body>
 </html>
