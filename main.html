@@ -28,10 +28,12 @@
 
          <nav class="collapse navbar-collapse hd-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-
-               <li><a href="login" style="font-weight: bold;">{{ login_text }}</a></li>
-               <li><a href="{{ signup_url }}/upgrade/needaccount">Need an account?</a></li>
-               <li><a>{{ dev_message }}</a></li>
+              <li><a href="login" style="font-weight: bold;">{{ login_text }}</a></li>
+              {% if isLogin %}
+              <li><a href="{{ signup_url }}/upgrade/needaccount">Need an account?</a></li>
+              <li><a href="{{ signup_url }}/resubscribe">Renew Subscription</a></li>
+              {% endif %}
+              <li><a>{{ dev_message }}</a></li>
             </ul>
          </nav>
       </div> <!-- End container -->
