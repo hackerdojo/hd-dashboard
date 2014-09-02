@@ -15,9 +15,11 @@ class MainHandler(webapp2.RequestHandler):
     user = users.get_current_user()
     values = {}
     if not user:
+      values["isLogin"] = True
       values["login_text"] = "Login"
       values["greeting"] = ""
     else:
+      values["isLogin"] = False
       values["login_text"] = "Logout %s" % (user.nickname())
     # If we're in the dev version, it should send people to the dev version of
     # other apps.
