@@ -8,7 +8,7 @@
     <link rel="icon" type="image/ico" href="http://cdn.hackerdojo.com/favicon.ico" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/hdstyles.css">
-  </head> 
+  </head>
 
   <body>
     <header id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="banner">
@@ -48,7 +48,7 @@
 
       <!-- "Your Account" dashboard icons go here -->
       <h4 class="hd-dashboard-row-margin"><span class="glyphicon glyphicon-user"></span> Your Account</h4>
-      <div class="row hd-row-centered"> 
+      <div class="row hd-row-centered">
         <div class="col-xs-3">
            <a id="hd-mail" title="Hacker Dojo Mail" href="https://mail.google.com/a/hackerdojo.com/">
             <img src="/static/img/mail.png" alt="Dojo Mail" class="img-responsive hd-dashboard-img">
@@ -76,6 +76,14 @@
             <h5>My Billing</h5>
           </a>
         </div>
+
+        <div class="col-xs-3">
+          <a id="hd-changeplan" title="Change Plan" href="{{ signup_url }}/change_plan">
+            <img src="/static/img/change_plan.png" alt="Change Plan" class="img-responsive hd-dashboard-img">
+            <h5>Change Plan</h5>
+          </a>
+        </div>
+
       </div> <!-- End Your Account close div -->
 
       <!-- What's Going On? -->
