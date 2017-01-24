@@ -2,19 +2,20 @@
 application: hd-dashboard
 # Use this if deploying to dev app:
 #application: hd-dashboard-dev
-version: 2
+version: 3
 runtime: python27
 api_version: 1
 threadsafe: true
 
+
 handlers:
 - url: /static
   static_dir: static
+
 - url: /login
   script: login.application
-- url: /_km/.*
-  script: keymaster.app
-  login: admin
+  secure: always
+
 - url: .*
   script: main.application
-
+  secure: always

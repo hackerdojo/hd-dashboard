@@ -27,7 +27,7 @@ class MainHandler(webapp2.RequestHandler):
         # other apps.
         if dev:
             values["dev_message"] = "You are using the dev version of Dashboard."
-            values["signup_url"] = "http://signup-dev.appspot.com"
+            values["signup_url"] = "https://signup-dev.appspot.com"
         else:
             values["signup_url"] = "http://signup.hackerdojo.com"
 
