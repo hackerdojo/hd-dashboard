@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Hacker Dojo Locker Rental</title>
+    <title>Hacker Dojo Mailbox Rental</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
@@ -37,7 +38,7 @@
             </button>
 
             <a class="navbar-brand" href="#">
-                <span>Hacker Dojo Locker Rental</span>
+                <span>Hacker Dojo Mailbox Rental</span>
             </a>
         </div>
 
@@ -62,60 +63,41 @@
 <!-- show the different sections of the dashboard here -->
 <div id="dashboard-details" class="container">
 
-    <h1>Locker Rental Signup</h1>
-    <p>Signup here to reserve your locker at Hacker Dojo.</p>
+    <h1>Mailbox Rental Signup</h1>
+    <p>Signup here to book a mailbox at Hacker Dojo.</p>
 
-    <p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+
+    <p><b>One Mailbox for USD30 monthly - Recurring Subscription</b></p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-top: 20px; margin-bottom: 50px">
         <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="SNCH36M3NYGAC">
+        <input type="hidden" name="hosted_button_id" value="RZJ472SK7CG2S">
         <table>
-
-            <tr>
-                <td><input type="hidden" name="on0" value="Locker rental subscription"/></td>
-            </tr>
-
-             <tr>
-                <td><input type="hidden" name="on2" value="Member Email"/></td>
+            <tr style="margin-top: 20px">
+                <td><input type="hidden" name="on0" value="Email address">Email address</td>
             </tr>
             <tr>
-                <td><input type="hidden" name="os2" value="{{ member_email }}"></td>
+                <td><input type="text" name="os0" maxlength="200" value="{{ member_email }}" required="required" disabled></td>
             </tr>
-
-            <tr>
-                <td><input type="hidden" name="on1" value="Contact Email">Contact Email (mandatory)</td>
-            </tr>
-            <tr>
-                <td><input type="text" name="os1" maxlength="200" required="required" style="margin-bottom: 10px"></td>
-            </tr>
-
-            <tr>
-                <td>Subscribe to:</td>
+            <tr style="margin-top: 20px">
+                <td><input type="hidden" name="on1" value="Text on your mailbox">Text on your mailbox</td>
             </tr>
             <tr>
-                <td>
-                    <select name="os0">
-                        <option value="One Locker">One Locker : $20.00 USD - monthly</option>
-                    </select>
-                </td>
+                <td><input type="text" name="os1" maxlength="200" required="required"></td>
             </tr>
-
         </table>
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit"
-               alt="PayPal - The safer, easier way to pay online!" style="margin-top: 20px">
+
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0"
+               name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin-top: 20px">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
 
-
-    </p>
-
     <hr/>
-    <h2>Locker Rental Terms</h2>
+    <h2>Mailbox Rental Terms</h2>
     <ul>
         <li>For active Hacker Dojo <a href="http://www.hackerdojo.com/Membership">members</a> only.</li>
-        <li>No storage of Hacker Dojo property (including monitors, electronics, etc.) or food items.</li>
-        <li>Hacker Dojo reserves the right to remove food or property belonging to Hacker Dojo from lockers.</li>
+        <li>Mailbox will be closed after 30 days when you stop paying for membership and/or mailbox subscription.</li>
+        <li>After 30 days your mail will be returned to sender.</li>
     </ul>
 
 
@@ -130,10 +112,10 @@
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
         a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
+            m = s.getElementsByTagName(o)[0];
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)

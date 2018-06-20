@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Hacker Dojo Locker Rental</title>
+    <title>Hacker Dojo Mailbox Rental</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/static/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/favicon/apple-icon-72x72.png">
@@ -37,7 +37,7 @@
             </button>
 
             <a class="navbar-brand" href="#">
-                <span>Hacker Dojo Locker Rental</span>
+                <span>Hacker Dojo Mailbox Rental</span>
             </a>
         </div>
 
@@ -62,61 +62,11 @@
 <!-- show the different sections of the dashboard here -->
 <div id="dashboard-details" class="container">
 
-    <h1>Locker Rental Signup</h1>
-    <p>Signup here to reserve your locker at Hacker Dojo.</p>
-
-    <p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="SNCH36M3NYGAC">
-        <table>
-
-            <tr>
-                <td><input type="hidden" name="on0" value="Locker rental subscription"/></td>
-            </tr>
-
-             <tr>
-                <td><input type="hidden" name="on2" value="Member Email"/></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="os2" value="{{ member_email }}"></td>
-            </tr>
-
-            <tr>
-                <td><input type="hidden" name="on1" value="Contact Email">Contact Email (mandatory)</td>
-            </tr>
-            <tr>
-                <td><input type="text" name="os1" maxlength="200" required="required" style="margin-bottom: 10px"></td>
-            </tr>
-
-            <tr>
-                <td>Subscribe to:</td>
-            </tr>
-            <tr>
-                <td>
-                    <select name="os0">
-                        <option value="One Locker">One Locker : $20.00 USD - monthly</option>
-                    </select>
-                </td>
-            </tr>
-
-        </table>
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit"
-               alt="PayPal - The safer, easier way to pay online!" style="margin-top: 20px">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-
-
-    </p>
-
+    <h1>Mailbox Rental Confirmation page</h1>
+    <p>Your mailbox subscription has been successfully received!</p>
+    <p>Once we have received your payment, a Hacker Dojo staff member will set up your mailbox in the lobby with the text you provided when you subscribed.</p>
+    <p> You can pick you your mail in your designated mailbox 24/7</p>
     <hr/>
-    <h2>Locker Rental Terms</h2>
-    <ul>
-        <li>For active Hacker Dojo <a href="http://www.hackerdojo.com/Membership">members</a> only.</li>
-        <li>No storage of Hacker Dojo property (including monitors, electronics, etc.) or food items.</li>
-        <li>Hacker Dojo reserves the right to remove food or property belonging to Hacker Dojo from lockers.</li>
-    </ul>
 
 
 </div>  <!-- End main container -->
