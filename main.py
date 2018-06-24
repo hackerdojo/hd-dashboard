@@ -152,6 +152,54 @@ class MailboxSoldOutHandler(webapp2.RequestHandler):
 
         self.response.out.write(template.render("mailboxsoldout.html", values))
 
+class StartupHandler(webapp2.RequestHandler):
+    def get(self):
+        # Check if we're in the dev version.
+        url = self.request.url
+        dev = False
+        if "-dev" in url:
+            dev = True
+
+        user = users.get_current_user()
+        values = {}
+        if not user:
+            values["isLogin"] = False
+            values["login_text"] = "Login"
+            values["greeting"] = ""
+            values['member_email'] = ""
+            self.redirect("/login")
+            return
+        else:
+            values['member_email'] = user.email()
+            values["isLogin"] = True
+            values["login_text"] = "Logout %s" % (user.nickname())
+
+        self.response.out.write(template.render("startup.html", values))
+
+
+class StartupConfirmationHandler(webapp2.RequestHandler):
+    def get(self):
+        # Check if we're in the dev version.
+        url = self.request.url
+        dev = False
+        if "-dev" in url:
+            dev = True
+
+        user = users.get_current_user()
+        values = {}
+        if not user:
+            values["isLogin"] = False
+            values["login_text"] = "Login"
+            values["greeting"] = ""
+            values['member_email'] = ""
+        else:
+            values['member_email'] = user.email()
+            values["isLogin"] = True
+            values["login_text"] = "Logout %s" % (user.nickname())
+
+        self.response.out.write(template.render("startupconfirmation.html", values))
+
+
 
 application = webapp2.WSGIApplication([
     ("/", MainHandler),
@@ -159,6 +207,8 @@ application = webapp2.WSGIApplication([
     ("/lockerconfirmation", LockerConfirmationHandler),
     ("/mailbox", MailboxHandler),
     ("/mailboxconfirmation", MailboxConfirmationHandler),
-    ("/mailboxsoldout", MailboxSoldOutHandler)
+    ("/mailboxsoldout", MailboxSoldOutHandler),
+    ("/startup", StartupHandler),
+    ("/startupconfirmation", StartupConfirmationHandler),
 
 ], debug=True)
