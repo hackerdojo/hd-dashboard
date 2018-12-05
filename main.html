@@ -46,7 +46,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="login" style="font-weight: bold;">{{ login_text }}</a></li>
                 {% if not isLogin %}
-                <li><a href="{{ signup_url }}/upgrade/needaccount">Need an account?</a></li>
+                <li><a href="{{ signup_url }}">Need an account?</a></li>
                 <li><a href="{{ signup_url }}/reactivate">Reactivate Membership</a></li>
                 {% endif %}
                 <li><a>{{ dev_message }}</a></li>
@@ -164,17 +164,17 @@
     <h4 class="hd-dashboard-row-margin"><span class="glyphicon glyphicon-user"></span> Your Account</h4>
     <div class="row hd-row-centered">
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-            <a id="hd-mybilling" title="My Billing" href="{{ signup_url }}/my_billing">
+            <a id="hd-mybilling" title="My Billing" href="{{ signup_url }}/billing">
                 <img src="/static/img/bill.png" alt="My Billing" class="img-responsive hd-dashboard-img">
                 <h5>My Billing</h5>
             </a>
         </div>
-        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
-            <a id="hd-changeplan" title="Change Plan" href="{{ signup_url }}/change_plan">
-                <img src="/static/img/change_plan.png" alt="Change Plan" class="img-responsive hd-dashboard-img">
-                <h5>Change Plan</h5>
-            </a>
-        </div>
+        <!--<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">-->
+            <!--<a id="hd-changeplan" title="Change Plan" href="{{ signup_url }}/change_plan">-->
+                <!--<img src="/static/img/change_plan.png" alt="Change Plan" class="img-responsive hd-dashboard-img">-->
+                <!--<h5>Change Plan</h5>-->
+            <!--</a>-->
+        <!--</div>-->
         <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
             <a id="hd-keys" title="Register A Key" href="{{ signup_url }}/key">
                 <img src="/static/img/key.png" alt="Register Key" class="img-responsive hd-dashboard-img">

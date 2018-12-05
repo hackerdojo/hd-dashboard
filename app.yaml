@@ -1,8 +1,3 @@
-# Use this if deploying to production app:
-application: hd-dashboard
-# Use this if deploying to dev app:
-#application: hd-dashboard-dev
-version: 3
 runtime: python27
 api_version: 1
 threadsafe: true
