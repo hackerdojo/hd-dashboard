@@ -63,43 +63,22 @@
 <!-- show the different sections of the dashboard here -->
 <div id="dashboard-details" class="container">
 
-    <h1>Mailbox Rental Signup</h1>
-    <p>Signup here to book a mailbox at Hacker Dojo.</p>
-
-
-    <p><b>One Mailbox for USD30 monthly - Recurring Subscription</b></p>
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-top: 20px; margin-bottom: 50px">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="RZJ472SK7CG2S">
-        <table>
-            <tr>
-                <td><input type="hidden" name="on0" value="Member Email"></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="os0" maxlength="200" value="{{ member_email }}"></td>
-            </tr>
-            <tr >
-                <td style="padding-top: 20px"><input type="hidden" name="on1" value="Text on your mailbox">First name and last name of recipient (add company name if applicable)</td>
-            </tr>
-            <tr>
-                <td><input type="text" name="os1" maxlength="200" required="required"></td>
-            </tr>
-        </table>
-
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0"
-               name="submit" alt="PayPal - The safer, easier way to pay online!" style="margin-top: 20px">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-
-    <hr/>
-    <h2>Mailbox Rental Terms</h2>
+     <h2>Mailbox Rental Terms</h2>
     <ul>
         <li>For active Hacker Dojo <a href="http://www.hackerdojo.com/Membership">members</a> only.</li>
         <li>Mailbox will be closed after 30 days when you stop paying for membership and/or mailbox subscription.</li>
         <li>After 30 days your mail will be returned to sender.</li>
     </ul>
 
+
+
+    <hr/>
+    <div class="row hd-row-centered">
+    <div class="col-lg-12">
+        <p><b>One Mailbox - USD30/month - Recurring Subscription</b></p>
+        <a class="button hd-col-centered" href="https://signup.hackerdojo.com/addons">Click here to sign up for a mailbox</a>
+    </div>
+    </div>
 
 </div>  <!-- End main container -->
 

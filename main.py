@@ -204,11 +204,7 @@ class StartupConfirmationHandler(webapp2.RequestHandler):
 application = webapp2.WSGIApplication([
     ("/", MainHandler),
     ("/locker", LockerHandler),
-    ("/lockerconfirmation", LockerConfirmationHandler),
     ("/mailbox", MailboxHandler),
-    ("/mailboxconfirmation", MailboxConfirmationHandler),
-    ("/mailboxsoldout", MailboxSoldOutHandler),
     ("/startup", StartupHandler),
-    ("/startupconfirmation", StartupConfirmationHandler),
 
 ], debug=True)

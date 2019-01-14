@@ -62,55 +62,6 @@
 <!-- show the different sections of the dashboard here -->
 <div id="dashboard-details" class="container">
 
-    <h1>Locker Rental Signup</h1>
-    <p>Signup here to reserve your locker at Hacker Dojo.</p>
-
-    <p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="SNCH36M3NYGAC">
-        <table>
-
-            <tr>
-                <td><input type="hidden" name="on0" value="Locker rental subscription"/></td>
-            </tr>
-
-             <tr>
-                <td><input type="hidden" name="on2" value="Member Email"/></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="os2" value="{{ member_email }}"></td>
-            </tr>
-
-            <tr>
-                <td><input type="hidden" name="on1" value="Contact Email">Contact Email (mandatory)</td>
-            </tr>
-            <tr>
-                <td><input type="text" name="os1" maxlength="200" required="required" style="margin-bottom: 10px"></td>
-            </tr>
-
-            <tr>
-                <td>Subscribe to:</td>
-            </tr>
-            <tr>
-                <td>
-                    <select name="os0">
-                        <option value="One Locker">One Locker : $20.00 USD - monthly</option>
-                    </select>
-                </td>
-            </tr>
-
-        </table>
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit"
-               alt="PayPal - The safer, easier way to pay online!" style="margin-top: 20px">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-    </form>
-
-
-    </p>
-
-    <hr/>
     <h2>Locker Rental Terms</h2>
     <ul>
         <li>For active Hacker Dojo <a href="http://www.hackerdojo.com/Membership">members</a> only.</li>
@@ -118,7 +69,13 @@
         <li>Hacker Dojo reserves the right to remove food or property belonging to Hacker Dojo from lockers.</li>
     </ul>
 
-
+    <hr/>
+    <div class="row hd-row-centered">
+    <div class="col-lg-12">
+        <p><b>One Locker - USD20/month - Recurring Subscription</b></p>
+        <a class="button hd-col-centered" href="https://signup.hackerdojo.com/addons">Click here to sign up for a locker</a>
+    </div>
+    </div>
 </div>  <!-- End main container -->
 
 <hr class="half-rule hd-dashboard-row-margin">
